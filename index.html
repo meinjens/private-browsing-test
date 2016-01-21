@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Private Browsing Test Application</title>
+        <meta name="description" content="Private Browsing Test Application">
+
+    </head>
+    <body>
+		<h1>Private Browsing Test Application</h1>
+
+		<dl>
+			<dt>SessionStorage object:</dt>
+			<dd id="testSessionStorageObject"></dd>
+			
+			<dt>Storing value in SessionStorage:</dt>
+			<dd id="testStoreInSessionStorage"></dd>
+
+			<dt>Reading value from SessionStorage</dt>
+			<dd id="testReadFromSessionStorage"></dd>
+			
+		</dl>
+
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="js/private-browsing-tests.js"></script>
+		<script type="text/javascript">
+			sessionStorageTest.testAll();
+		</script>
+    </body>
+</html>
