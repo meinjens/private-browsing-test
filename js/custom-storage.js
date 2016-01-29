@@ -2,7 +2,7 @@
 	
 	'use strict';
 	
-	window.customStorage = function() {
+	customStorage = function() {
 		return {
 			set: function(key, value) {
 	            storage.setItem(key, value);
