@@ -35,10 +35,10 @@
 		var storage = window.sessionStorage || new FakeStorage();
 		
 		return {
-			set: function(key, value) {
+			setItem: function(key, value) {
 	            storage.setItem(key, value);
 	        },
-	        get: function(key, defaultValue) {
+	        getItem: function(key, defaultValue) {
 	            return storage.getItem(key) || defaultValue;
 	        },
 	        setObject: function(key, value) {
@@ -47,7 +47,7 @@
 	        getObject: function(key) {
 	            return JSON.parse(storage.getItem(key) || '{}');
 	        },
-	        remove: function(key){
+	        removeItem: function(key){
 	            storage.removeItem(key);
 	        },
 	        clear: function() {
