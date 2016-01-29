@@ -34,4 +34,4 @@
 	
 	console.log(window.customStorage);
 	
-}());
+}(window));
