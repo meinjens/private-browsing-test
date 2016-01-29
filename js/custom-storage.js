@@ -32,7 +32,7 @@
 	
 	var customStorageFactory = function() {
 		
-		var storage = window.sessionStorage || new FakeStorage();
+		var storage = new FakeStorage();
 		
 		return {
 			set: function(key, value) {
