@@ -177,5 +177,7 @@
 			
 	};
 	
+	sessionStorageTest.testAll();
+	
 })(window);
 
