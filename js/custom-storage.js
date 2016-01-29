@@ -1,6 +1,8 @@
-(function(window){
+(function(window) {
 	
 	'use strict';
+	
+	console.log(window);
 	
 	var customStorage = window.customStorage || {};
 	
