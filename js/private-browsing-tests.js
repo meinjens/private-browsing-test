@@ -114,15 +114,15 @@ var sessionStorageTest = {
 				result = 'customStorage object does not exist!';
 			}
 			
-			$('#testLocalStorageObject').html(result);
+			$('#testCustomStorageObject').html(result);
 		},
 	
-		testStoreInLocalStorage : function() {
+		testStoreInCustomStorage : function() {
 			var result = '';
 			
-			if (localStorage !== undefined && localStorage !== null) {
+			if (window.customStorage !== undefined && window.customStorage !== null) {
 				try {
-					localStorage.setItem('myKey', 'myValue');
+					window.customStorage.setItem('myKey', 'myValue');
 					result = 'Successfully stored';
 				} catch (exception) {
 					result = 'Unable to store in localStorage. See console for exception details!';
@@ -130,31 +130,31 @@ var sessionStorageTest = {
 				}
 			}
 			
-			$('#testStoreInLocalStorage').html(result);
+			$('#testStoreInCustomStorage').html(result);
 		},
 		
-		testReadFromLocalStorage : function() {
+		testReadFromCustomStorage : function() {
 			var result = '';
 			
-			if (localStorage !== undefined && localStorage !== null) {
+			if (window.customStorage !== undefined && window.customStorage !== null) {
 				try {
-					localStorage.setItem('myKey', 'myValue');
+					window.customStorage.setItem('myKey', 'myValue');
 					
-					var data = localStorage.getItem('myKey');
+					var data = window.customStorage.getItem('myKey');
 					
 					if (data === 'myValue') {
-						result = 'Successfully read from localStorage';
+						result = 'Successfully read from customStorage';
 					} else {
-						result = 'Unable to read from localStorage';
+						result = 'Unable to read from customStorage';
 					}
 					
 				} catch (exception) {
-					result = 'Error reading from localStorage. See console for exception details';
+					result = 'Error reading from customStorage. See console for exception details';
 					console.log(exception)
 				}
 			}
 			
-			$('#testReadFromLocalStorage').html(result);
+			$('#testReadFromCustomStorage').html(result);
 		},		
 		
 		
@@ -162,9 +162,14 @@ var sessionStorageTest = {
 			this.testSessionStorageObject();
 			this.testStoreInSessionStorage();
 			this.testReadFromSessionStorage();
+			
 			this.testLocalStorageObject();
 			this.testStoreInLocalStorage();
 			this.testReadFromLocalStorage();
+			
+			this.testCustomStorageObject();
+			this.testStoreInCustomStorage();
+			this.testReadFromCustomStorage();
 		}
 		
 };
