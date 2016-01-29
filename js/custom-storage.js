@@ -1,12 +1,11 @@
-(function(window) {
+(function(window){
 	
 	'use strict';
 	
-	console.log(window);
-	
-	var customStorage = window.customStorage || {};
-	
-	customStorage = function() {
+	window.customStorage = function() {
+		
+		var storage = window.sessionStorage;
+		
 		return {
 			set: function(key, value) {
 	            storage.setItem(key, value);
