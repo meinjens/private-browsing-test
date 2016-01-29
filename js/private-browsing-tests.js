@@ -122,7 +122,7 @@ var sessionStorageTest = {
 			
 			if (window.customStorage !== undefined && window.customStorage !== null) {
 				try {
-					window.customStorage.setItem('myKey', 'myValue');
+					window.customStorage.set('myKey', 'myValue');
 					result = 'Successfully stored';
 				} catch (exception) {
 					result = 'Unable to store in localStorage. See console for exception details!';
@@ -138,9 +138,9 @@ var sessionStorageTest = {
 			
 			if (window.customStorage !== undefined && window.customStorage !== null) {
 				try {
-					window.customStorage.setItem('myKey', 'myValue');
+					window.customStorage.set('myKey', 'myValue');
 					
-					var data = window.customStorage.getItem('myKey');
+					var data = window.customStorage.get('myKey');
 					
 					if (data === 'myValue') {
 						result = 'Successfully read from customStorage';
