@@ -2,7 +2,11 @@
 	
 	'use strict';
 	
-	console.log('mach halt');
+	window.customStorage = {};
+	
+	
+	
+	console.log(window.customStorage);
 	
 	
 }());
