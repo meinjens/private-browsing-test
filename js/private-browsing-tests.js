@@ -53,10 +53,23 @@ var sessionStorageTest = {
 			$('#testReadFromSessionStorage').html(result);
 		},
 		
+		testLocalStorageObject : function() {
+			var result = '';
+			
+			if (localStorage !== undefined && localStorage !== null) {
+				result = 'localStorage object exists!';
+			} else {
+				result = 'localStorage object does not exist!';
+			}
+			
+			$('#testLocalStorage').html(result);
+		},
+		
 		testAll : function() {
 			this.testSessionStorageObject();
 			this.testStoreInSessionStorage();
-			this.testReadFromSessionStorage();			
+			this.testReadFromSessionStorage();
+			this.testLocalStorageObject();
 		}
 		
 };
