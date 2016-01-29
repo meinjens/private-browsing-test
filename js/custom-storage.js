@@ -30,7 +30,7 @@
     };
 	
 	
-	window.customStorage = function() {
+	var customStorageFactory = function() {
 		
 		var storage = window.sessionStorage || new FakeStorage();
 		
@@ -58,5 +58,7 @@
 	        }
 		};	
 	};
+	
+	window.customStorage = new customStorageFactory();
 		
 }(window));
